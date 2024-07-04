@@ -238,7 +238,8 @@
     font-size: 16px;
 }
 
-.mwpl-login-body .mwpl-form-fields .mwpl-input-item input[type=submit].hide {
+.mwpl-login-body .mwpl-form-fields .mwpl-input-item *.hide
+{
     pointer-events: none;
     opacity: 0;
     visibility: hidden;

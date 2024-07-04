@@ -382,7 +382,7 @@ class login
                 break;
             }
         }
-
+        $messages = apply_filters('mwpl_login_form_messages', $messages);
         if($messages && is_array($messages))
         {
             foreach($messages as $item)

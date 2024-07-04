@@ -129,7 +129,13 @@ class assets
         $mw_drag_and_drop = self::get_js_url('mw_drag_and_drop');
         wp_enqueue_script('mw_drag_and_drop', $mw_drag_and_drop, ['jquery', 'jquery-ui-sortable'], $version, true);
 
-        wp_localize_script('mw_drag_and_drop', 'mwp_data', ['au' => admin_url('admin-ajax.php')]);
+        $data = [
+            'au' => admin_url('admin-ajax.php'),
+            'texts' => [
+                'delete_msg' => esc_html__('Are you sure you want to delete this item?', 'mihanpanel'),
+            ],
+        ];
+        wp_localize_script('mw_drag_and_drop', 'mwp_data', $data);
     }
     public static function load_media_uploader()
     {

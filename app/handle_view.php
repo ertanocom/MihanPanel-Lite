@@ -809,6 +809,22 @@ class handle_view
         $render_method = apply_filters('mwpl_option_panel/render_method/smart_login_generate_random_username', []);
         self::handle_option_panel_render_method($render_method);
     }
+    static function option_panel_field_login_with_google()
+    {
+        $render_method = apply_filters('mwpl_option_panel/render_method/login_with_google', []);
+        self::handle_option_panel_render_method($render_method, 'option_panel_field_login_with_google_alternative');
+    }
+    static function option_panel_field_login_with_google_alternative()
+    {
+        ?>
+        <div class="mp_option_field">
+            <div>
+                <label><?php echo esc_html__('Activate login with Google', 'mihanpanel') ?></label>
+                <input type="checkbox">
+            </div>
+        </div>
+        <?php
+    }
     static function option_panel_field_password_type()
     {
         $render_method = apply_filters('mwpl_option_panel/render_method/password_type', []);

@@ -90,6 +90,9 @@ jQuery(document).ready(function($){
     });
     $(document).on('click', '.mw_sortable input[name=delete]', function(e){
         e.preventDefault();
+        if (!confirm(mwp_data.texts.delete_msg)) {
+            return false;
+        }
         let mw_this = $(this),
             mw_type = mw_this.closest('.mw_fields_wrapper').data('mw_type');
             mw_id = mw_this.closest('.mw_field_item').find('input[name=id]').val(),

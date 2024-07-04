@@ -45,8 +45,13 @@ jQuery(document).ready(function ($) {
 // This function is Heart of this plugin LOL sorry :P
 (function(jQuery) {
     jQuery(document).ready(function($){
+        let selector
         $.fn.mwpl_iconpicker = function(el){
             let button = $(this);
+            if(!button.length)
+            {
+                return
+            }
 
             let pickerHandler = function (){
                 $(this).addClass('active-icon-selector-btn')
@@ -58,7 +63,7 @@ jQuery(document).ready(function ($) {
             if (button.attr('type')){
                 button.focusin(pickerHandler)
             } else {
-                button.click(pickerHandler)
+                pickerHandler()
             }
         }
         $.fn.mwpl_iconpicker2 = function(el){
@@ -74,7 +79,7 @@ jQuery(document).ready(function ($) {
             $('.howl-iconpicker .geticonval').removeClass('selectedicon');
             $(this).addClass('selectedicon');
 
-            if (activeButton.parent().find(selector)){
+            if (activeButton.parent().find(selector).length){
                 activeButton.parent().find(selector).val(getIconId).change();
             } else {
                 field.val(getIconId).change();

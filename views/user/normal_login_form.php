@@ -42,8 +42,9 @@
             <div class="mwpl-spinner-wrapper">
                 <span class="mwpl-spinner"></span>
             </div>
-
         </div>
+        <?php do_action('mwpl_login_form_after_submit_button'); ?>
+
         <?php if (\mihanpanel\app\options::get_user_can_register() && !isset($_GET['mwpl_register_status']) && !isset($_GET['activation_status'])) : ?>
             <div class="mwpl-input-item">
                 <div class="mwpl-register-link mwpl-button mp-toggle-form-btn">

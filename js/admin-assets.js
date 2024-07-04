@@ -1,7 +1,13 @@
 jQuery(document).ready(function ($){
     $('.mw-new-tab-record-icon').mwpl_iconpicker(".mw-new-tab-record-icon");
 
-    $('.mwpl-icon-selector').mwpl_iconpicker(".mwpl-icon-selector-field");
+    let iconSelectors = $('.mwpl-icon-selector')
+    iconSelectors.each((index, value) => {
+        let el = $(value)
+        el.on('click', function(){
+            el.mwpl_iconpicker(el.closest('.mwpl-icon-upload-field-wrap').find('.mwpl-icon-selector-field'))
+        })
+    })
 
     $('.fontawesome-handle').on('click', function(e){
         let mwpl_this = $(this),

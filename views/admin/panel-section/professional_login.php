@@ -22,6 +22,13 @@
                 </p>
             </div>
         </div>
+
+        <div class="mp_option_section <?php \mihanpanel\app\tools::handleOptionPanelSectionVersionStateClass()?>">
+            <?php \mihanpanel\app\tools::handleProVersionBoxInOptionPanel();?>
+            <h3 class="mp_option_section_title"><?php esc_html_e("Login with Google", "mihanpanel"); ?></h3>
+            <?php \mihanpanel\app\handle_view::option_panel_field_login_with_google(); ?>
+        </div>
+        
         <div class="mp_option_section <?php \mihanpanel\app\tools::handleOptionPanelSectionVersionStateClass()?>">
             <?php \mihanpanel\app\tools::handleProVersionBoxInOptionPanel();?>
 

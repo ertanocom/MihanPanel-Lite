@@ -3,9 +3,9 @@ Contributors: ertano, mihanwp
 Donate link: https://ertano.com/
 Tags: register,login,profile,registration,user profile,membership,signup,dashboard
 Requires at least: 4.0
-Tested up to: 6.5
+Tested up to: 6.6.1
 Requires PHP: 7.4
-Stable tag: 11.10
+Stable tag: 12.14
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
